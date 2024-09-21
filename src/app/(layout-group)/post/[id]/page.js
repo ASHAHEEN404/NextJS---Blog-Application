@@ -21,7 +21,7 @@ const Post = async ({ params }) => {
   // Determine the previous and next post IDs
   const previousPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost =
-    currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+    currentIndex <= allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   return (
     <div className="max-w-3xl p-6 mx-auto">
